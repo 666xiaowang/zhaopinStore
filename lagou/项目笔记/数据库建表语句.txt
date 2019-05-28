@@ -1,0 +1,131 @@
+表1,用户表: l_user
+
+
+CREATE TABLE l_user (
+  userId varchar(32) primary key,
+  name varchar(20) not null,
+  email varchar(20) not null,
+  password varchar(20) not null,
+  gender varchar(4) not null,
+  topDegree varchar(20) not null,
+  phoneno number(18) not null,
+  workyear varchar(20) not null,
+  currentState varchar(50) not null,
+  type number(2) not null
+);
+
+表2,简历表: l_jianli
+
+CREATE TABLE l_jianli (
+  userId varchar2(32) primary key,
+  expectCity varchar2(30) ,
+  type varchar2(20),
+  expectPosition varchar2(20) ,
+  expectSalary varchar2(20) ,
+  companyName varchar2(30) ,
+  positionName varchar2(30) ,
+  companyYearStart varchar2(20) ,
+  companyYearEnd varchar2(20) ,
+  companyMonthStart varchar2(20) ,
+  companyMonthEnd varchar2(20) ,
+  projectName varchar2(30) ,
+  thePost varchar2(30) ,
+  projectYearStart varchar2(20) ,
+  projectYearEnd varchar2(20) ,
+  projectMonthStart varchar2(20) ,
+  projectMonthEnd varchar2(20) ,
+  projectDescription varchar2(200) ,
+  schoolName varchar2(20) ,
+  degree varchar2(30) ,
+  professionalName varchar2(30) ,
+  schoolYearStart varchar2(20) ,
+  schoolYearEnd varchar2(20) ,
+  selfDescription varchar2(200) ,
+  workLink varchar2(50) ,
+  workDescription varchar2(200) 
+);
+
+
+表3,公司表: l_company_job
+
+CREATE TABLE l_company_job (
+companyId varchar2(32) primary key,
+companyname varchar2(50),--公司名称
+jobname varchar2(50),--公司名称
+domain  varchar2(50),--所属领域
+leader varchar2(50),--创始人
+stage varchar2(50),--发展阶段
+guimo varchar2(50),--公司规模
+companytag	varchar2(70),--公司标签
+advertisejob varchar2(50),--公司招聘职位
+city varchar2(50),--公司所在城市
+monthsal varchar2(50),--月薪
+workexperience varchar2(50),--工作经验
+mindegree varchar2(50),--最低学位
+workallure varchar2(100),--职位诱惑
+issuedate varchar2(50),--发布日期
+companyType number(2)--公司类型
+);
+
+
+
+INSERT into l_company_job values('1','运营总监 ','节操精选','移动互联网','陈桦','初创型（天使轮）','少于15人','移动互联网+五险一金+扁平管理','运营总监','北京','15k-20k','3-5年','本科','发展前景','一天前',0);
+INSERT into l_company_job values('2','售前工程师（运维经验优先）','监控宝','云计算/大数据','','成长型（A轮）','50-150人','五险一金+福利好+商业险','售前工程师（运维经验优现）','北京','6k-12k','3-5年','大专','五险一金+商业保险+带薪年假+奖金等','一天前',0);
+INSERT into l_company_job values('3','手机游戏运营  ','爱游戏（中国电信游戏基地）','移动互联网，游戏','','初创型（未融资）','150-500人','绩效奖金+年底双薪+五险一金','手机游戏运营','南京','4k-8k','1-3年','本科','工作氛围和谐+正面激励成长+福利好','一天前',0);
+INSERT into l_company_job values('4','葡萄酒内容运营专员','酒咔擦','移动互联网，生活服务','','初创型（天使轮）','15-50人','五险一金+股票期权+带薪年假','葡萄酒内容运营专员','广州','5k-8k','1-3年','本科','喝着世界美酒快乐的工作！','一天前',0);
+INSERT into l_company_job values('5','百度移动游戏UI designer','百度移动公司','移动互联网','李彦宏','上市公司','2000人以上','年终分红+绩效奖金+股票期权','百度移动游戏UI designer','北京','7k-14k','1-3年','本科','喜欢游戏，喜欢生活，游戏生活','一天前',0);
+INSERT into l_company_job values('6','iOS','多盟domob','移动互联网','齐玉杰','成长型（B轮））','150-500人','效绩奖金+股票期权+年底双薪','iOS','北京','13k-26k','不限','本科','中国第一只能手机广告平台','一天前',0);
+INSERT into l_company_job values('7','Java','搜狗','移动互联网，搜索','王小川','初创型（未融资）','2000人以上','五险一金+带薪年假+午餐补助','java','北京','15k-25k','1-3年','本科','项目快速发展，技术氛围浓厚，有业界大牛','一天前',0);
+INSERT into l_company_job values('8','web前端','杰派网络','移动互联网','顾培盟','初创型（天使轮）','15-50人','股票期权+年底双薪+效绩奖金','web前段','上海','6k-12k','1-3年','本科','靠谱的工程师要来靠谱的公司','一天前',0);
+INSERT into l_company_job values('9','Java','蘑菇街','电子商务','陈琪','成熟型（c轮）','150-500人','管理规范+无限零食饮料+轻时尚','java','杭州','15k-30k','不限','本科','有技术挑战、有成长机会、有漂亮妹子','一天前',0);
+INSERT into l_company_job values('10','测试实习生','一铺科技','移动互联网，企业服务','William','成长型（A轮）','50-150人','单身住宿+股票期权+午餐补助','测试实习生','上海','3k-5k','不限','本科','发实习通过、毕业直接转正、实习期有餐贴','一天前',0);
+INSERT into l_company_job values('11','网页产品设计师','途家网','移动互联网，O2O','罗军','成长型（B轮）','500-2000人','效绩奖励+五险一金+带薪年假','网页产品设计师','北京','8k-10k','1-3年','本科','六险一金、饭补、班车、晋升机制、氛围好','14:15',0);
+INSERT into l_company_job values('12','产品经理（工商系统项目）','PEVC','金融互联网','兰宁羽','成长型（A轮）','50-100人','五险一金+节日礼物+弹性工作','产品经理（工商系统项目）','北京','10k-20k','5-10年','本科','和一群聪明的人共事','一天前',0);
+INSERT into l_company_job values('13','团队经理','宜信公司','移动互联网、金融互联网','唐宁','成熟性（D轮以上）','2000人以上','管理规范+技能培训+扁平管理','团队经理','北京','10k-15k','不限','大专','位置佳，环境优越、发展空间大、薪酬高','2天前',0);
+INSERT into l_company_job values('14','手游商务','恺英网络','移动互联网，游戏','王悦','初创型（未融资）','500-2000人','游戏工资+页游+手游','手游商务','上海','6k-10k','1-3年','大专','一年两次调薪、免费早餐、晚餐、项目、年终奖','一天前',0);
+INSERT into l_company_job values('15','市场推广','在路上','移动互联网，在线旅游','黄天赐','成熟型（C轮）','50-150人','弹性工作+领导好+移动互联网','市场推广','上海','7k-12k','1-3年','大专','年度16薪市场营销发展方向','一天前',0);
+INSERT into l_company_job values('16','运营总监1 ','节操精选','移动互联网','陈桦','初创型（天使轮）','少于15人','移动互联网+五险一金+扁平管理','运营总监','北京','15k-20k','3-5年','本科','发展前景','一天前',1);
+INSERT into l_company_job values('17','售前工程师（运维经验优先）1','监控宝','云计算/大数据','','成长型（A轮）','50-150人','五险一金+福利好+商业险','售前工程师（运维经验优现）','北京','6k-12k','3-5年','大专','五险一金+商业保险+带薪年假+奖金等','一天前',1);
+INSERT into l_company_job values('18','手机游戏运营 1','爱游戏（中国电信游戏基地）','移动互联网，游戏','','初创型（未融资）','150-500人','绩效奖金+年底双薪+五险一金','手机游戏运营','南京','4k-8k','1-3年','本科','工作氛围和谐+正面激励成长+福利好','一天前',1);
+INSERT into l_company_job values('19','葡萄酒内容运营专员1','酒咔擦','移动互联网，生活服务','','初创型（天使轮）','15-50人','五险一金+股票期权+带薪年假','葡萄酒内容运营专员','广州','5k-8k','1-3年','本科','喝着世界美酒快乐的工作！','一天前',1);
+INSERT into l_company_job values('20','百度移动游戏UI designer1','百度移动公司','移动互联网','李彦宏','上市公司','2000人以上','年终分红+绩效奖金+股票期权','百度移动游戏UI designer','北京','7k-14k','1-3年','本科','喜欢游戏，喜欢生活，游戏生活','一天前',1);
+INSERT into l_company_job values('21','iOS1','多盟domob','移动互联网','齐玉杰','成长型（B轮））','150-500人','效绩奖金+股票期权+年底双薪','iOS','北京','13k-26k','不限','本科','中国第一只能手机广告平台','一天前',1);
+INSERT into l_company_job values('22','Java1','搜狗','移动互联网，搜索','王小川','初创型（未融资）','2000人以上','五险一金+带薪年假+午餐补助','java','北京','15k-25k','1-3年','本科','项目快速发展，技术氛围浓厚，有业界大牛','一天前',1);
+INSERT into l_company_job values('23','web前端1','杰派网络','移动互联网','顾培盟','初创型（天使轮）','15-50人','股票期权+年底双薪+效绩奖金','web前段','上海','6k-12k','1-3年','本科','靠谱的工程师要来靠谱的公司','一天前',1);
+INSERT into l_company_job values('24','Java1','蘑菇街','电子商务','陈琪','成熟型（c轮）','150-500人','管理规范+无限零食饮料+轻时尚','java','杭州','15k-30k','不限','本科','有技术挑战、有成长机会、有漂亮妹子','一天前',1);
+INSERT into l_company_job values('25','测试实习生1','一铺科技','移动互联网，企业服务','William','成长型（A轮）','50-150人','单身住宿+股票期权+午餐补助','测试实习生','上海','3k-5k','不限','本科','发实习通过、毕业直接转正、实习期有餐贴','一天前',1);
+INSERT into l_company_job values('26','网页产品设计师1','途家网','移动互联网，O2O','罗军','成长型（B轮）','500-2000人','效绩奖励+五险一金+带薪年假','网页产品设计师','北京','8k-10k','1-3年','本科','六险一金、饭补、班车、晋升机制、氛围好','14:15',1);
+INSERT into l_company_job values('27','产品经理（工商系统项目）1','PEVC','金融互联网','兰宁羽','成长型（A轮）','50-100人','五险一金+节日礼物+弹性工作','产品经理（工商系统项目）','北京','10k-20k','5-10年','本科','和一群聪明的人共事','一天前',1);
+INSERT into l_company_job values('28','团队经理1','宜信公司','移动互联网、金融互联网','唐宁','成熟性（D轮以上）','2000人以上','管理规范+技能培训+扁平管理','团队经理','北京','10k-15k','不限','大专','位置佳，环境优越、发展空间大、薪酬高','2天前',1);
+INSERT into l_company_job values('29','手游商务1','恺英网络','移动互联网，游戏','王悦','初创型（未融资）','500-2000人','游戏工资+页游+手游','手游商务','上海','6k-10k','1-3年','大专','一年两次调薪、免费早餐、晚餐、项目、年终奖','一天前',1);
+INSERT into l_company_job values('30','市场推广1','在路上','移动互联网，在线旅游','黄天赐','成熟型（C轮）','50-150人','弹性工作+领导好+移动互联网','市场推广','上海','7k-12k','1-3年','大专','年度16薪市场营销发展方向','一天前',1);
+
+表4,职位表: l_position
+
+CREATE TABLE l_position (
+positionId varchar(32) primary key,
+positionType varchar(32), --职位类别
+positionName varchar(32), --职位名称
+department varchar(32),   --所属部门
+jobNature varchar(32),	 --工作性质
+salaryMin varchar(32),	 --最低薪水
+salaryMax varchar(32),	 --最高薪水
+workAddress varchar(32),	--工作城市
+experience varchar(32),		--工作经历
+education varchar(32),		--学历要求
+positionAdvantage varchar(32),	--职位诱惑
+positionDetail varchar(32),		--职位描述
+positionAddress varchar(32),	--工作地址	
+forwardEmail varchar(32),--接收简历邮箱		
+userId varchar(32)--用户的id		
+);
+
+
+CREATE TABLE l_company (
+  companyId varchar(32) primary key,
+  companyName varchar(20) not null,
+  companyCity varchar(20) not null,
+  companyType varchar(20) not null,
+  companyRound varchar(20) not null,
+  expectSalary varchar(20) not null,
+);
